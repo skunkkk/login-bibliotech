@@ -1,38 +1,135 @@
-.App {
-  text-align: center;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.Box-1 {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.conteudo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  background: #a0dff8;
+
 }
 
-.App-link {
-  color: #61dafb;
+.login {
+  background: rgba(0, 0, 0, .5);
+  border-radius: 0.625rem;
+  width: 80vw;
+  padding: 3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login h2 {
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.login .box-user {
+  position: relative;
+}
+
+.login .box-user input {
+  width: 100%;
+  padding: 10px 0;
+  outline: none;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.login .box-user label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login .box-user input:focus~label {
+  top: -20px;
+  left: 0;
+  color: #3EAEF4;
+  font-size: 0.9rem;
+}
+
+.login .box-user input:valid~label {
+  top: -20px;
+  left: 0;
+  color: #3EAEF4;
+  font-size: 0.9rem;
+}
+
+.forget {
+  font-size: 0.9rem;
+  color: #3EAEF4;
+
+}
+
+.botao {
+  text-decoration: none;
+  position: relative;
+  color: #3EAEF4;
+  font-size: 0.9rem;
+  top: -1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.fotoLogo{
+  display: none;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+
+.conteudo{
+  width: 40vw;
+  background-color: #a0dff8;
+}
+
+.containerGeral{
+  display: flex;
+  
+}
+
+.fotoLogo{
+  display: flex;
+  height: 100vh;
+  width: 60vw;
+  background-color: #E7EAE7;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login{
+  width: 30vw;
+}
+
+.tituloLogin{
+  font-size: 5rem;
+}
+
 }
